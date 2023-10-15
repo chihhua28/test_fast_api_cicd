@@ -1,7 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
 import requests
-from config import CHATGPT_API_KEY
 
 app = FastAPI()
 
