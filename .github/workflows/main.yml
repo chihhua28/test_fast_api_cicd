@@ -30,5 +30,5 @@ jobs:
     - name: test Curl respond
       run: |
         curl -X 'GET' \
-        'http://127.0.0.1:8000/chatgpt/{prompt}?your_question=how%20are%20you%3F' \
+        ${{ secrets.API_ENDPOINT }} \
         -H 'accept: application/json'
