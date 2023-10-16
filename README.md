@@ -20,7 +20,7 @@ This repository contains a FastAPI application that integrates the Chatgpt API a
 2. Navigate to the project directory:
     
     ```bash
-    cd <your-project-director>
+    cd <your-project-directory>
     ```
     
 3. Install the required dependencies:
