@@ -24,12 +24,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Start FastAPI with Chatbot
+    - name: Static Code Linting with flake8
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    
+    - name: Unit Testing with pytest
       env:
         CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       run: |
-        python3 -m uvicorn main:app --reload
-        curl -X 'GET' \
-        ${{ secrets.API_ENDPOINT }} \
-        -H 'accept: application/json'
-
+        pytest

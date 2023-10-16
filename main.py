@@ -6,9 +6,9 @@ app = FastAPI()
 
 @app.get("/chatgpt/{prompt}")
 
-def enter_your_question(your_question: Union[str, None] = None):
+def enter_your_question(api_key, question: Union[str, None] = None):
     api_key = CHATGPT_API_KEY
-    prompt = your_question
+    prompt = question
 
     response = requests.post(
     'https://api.openai.com/v1/chat/completions',
