@@ -26,3 +26,9 @@ jobs:
         CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       run: |
         python3 -m uvicorn main:app --reload
+        
+    - name: test Curl respond
+      run: |
+        curl -X 'GET' \
+        'http://127.0.0.1:8000/chatgpt/{prompt}?your_question=how%20are%20you%3F' \
+        -H 'accept: application/json'
