@@ -29,5 +29,5 @@ def test_get_cocktail_by_name():
     # Check if the response contains the expected keys
     expected_keys = ["strDrink", "strInstructions"]
 
-    for cocktail in data["drinks"]:
-        assert all(key in cocktail for key in expected_keys), f"Response does not contain the expected keys for cocktail: {cocktail['strDrink']}"
+    for item in data:
+        assert all(key in item for key in expected_keys), f"Response does not contain the expected keys for cocktail: {item['strDrink']}"
