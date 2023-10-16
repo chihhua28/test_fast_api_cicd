@@ -26,12 +26,9 @@ jobs:
         CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       run: |
         python3 -m uvicorn main:app --reload
-        
-    - name: Wait for the server to start
-      run: sleep 15s
-        
-    - name: test Curl respond
-      run: |
         curl -X 'GET' \
         ${{ secrets.API_ENDPOINT }} \
         -H 'accept: application/json'
+        
+    - name: Stop the FastAPI server
+      run: lsof -ti :8000 | xargs kill -9 || true
