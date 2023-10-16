@@ -2,10 +2,10 @@
 
 This repository contains a FastAPI application that integrates the Chatgpt API and Cocktail API. It also includes GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD) using pytest for testing.
 
-main.py: This file contains the code to build a FastAPI application. 
-test_main.py: This file is dedicated to unit tests for your FastAPI application. It uses the pytest framework to run tests and ensure that the application functions as expected.
-requirements.txt: This file lists the necessary Python dependencies and their specific versions required to run the FastAPI application and its associated tests.
-.github/workflows/main.yml: This file represents the GitHub Actions workflow file. It defines the CI/CD pipeline for your FastAPI application, specifying the steps to be executed when certain events occur, such as pushing changes to the main branch.
+* main.py: This file contains the code to build a FastAPI application. 
+* test_main.py: This file is dedicated to unit tests for your FastAPI application. It uses the pytest framework to run tests and ensure that the application functions as expected.
+* requirements.txt: This file lists the necessary Python dependencies and their specific versions required to run the FastAPI application and its associated tests.
+* .github/workflows/main.yml: This file represents the GitHub Actions workflow file. It defines the CI/CD pipeline for your FastAPI application, specifying the steps to be executed when certain events occur, such as pushing changes to the main branch.
 
 
 ## **Setup and Installation**
