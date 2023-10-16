@@ -1,15 +1,13 @@
 from typing import Union
 from fastapi import FastAPI
 import requests
-from config import CHATGPT_API_KEY
 
 app = FastAPI()
 
 @app.get("/chatgpt/{prompt}")
 
-def enter_your_question(your_question: Union[str, None] = None):
-    api_key = CHATGPT_API_KEY
-    prompt = your_question
+def enter_your_question(api_key, question: Union[str, None] = None):
+    prompt = question
 
     response = requests.post(
     'https://api.openai.com/v1/chat/completions',
@@ -23,4 +21,4 @@ def enter_your_question(your_question: Union[str, None] = None):
     })
 
     json = response.json()
-    return(json)        
+    return(json)
