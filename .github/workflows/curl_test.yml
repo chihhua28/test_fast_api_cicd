@@ -1,0 +1,20 @@
+name: Curl Test
+
+on:
+  push:  
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Run curl test
+      run: |
+        curl -X 'GET' \
+        'http://127.0.0.1:8000/chatgpt/{prompt}?your_question=how%20are%20you%3F' \
+        -H 'accept: application/json'
