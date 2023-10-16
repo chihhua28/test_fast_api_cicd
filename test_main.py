@@ -1,12 +1,13 @@
 import pytest
 from fastapi.testclient import TestClient
 from main import app
+import os
 
 client = TestClient(app)
 
 def test_enter_your_question():
 
-    api_key = CHATGPT_API_KEY
+    api_key = os.environ.get('CHATGPT_API_KEY')
     question = "How are you?"
     response = client.get(f"/chatgpt/{question}?api_key={api_key}")
 
