@@ -25,6 +25,7 @@ jobs:
         pip install -r requirements.txt
         pip install flake8
         pip install pytest
+        pip install httpx
 
     - name: Static Code Linting with flake8
       env:
