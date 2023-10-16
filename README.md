@@ -50,7 +50,7 @@ This repository contains a FastAPI application that integrates the Chatgpt API a
     python3 -m uvicorn main:app --reload
     ```
     
-2. Access the FastAPI application in your browser at **`http://127.0.0.1:8000`**.
+2. Access the FastAPI application in your browser at **`http://127.0.0.1:8000/docs`**.
 3. Test the application endpoints using the provided documentation and sample API requests.
 
 ## **GitHub Actions**
