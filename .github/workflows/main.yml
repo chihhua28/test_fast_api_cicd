@@ -27,6 +27,9 @@ jobs:
       run: |
         python3 -m uvicorn main:app --reload
         
+    - name: Wait for the server to start
+      run: sleep 15s
+        
     - name: test Curl respond
       run: |
         curl -X 'GET' \
