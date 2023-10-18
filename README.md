@@ -1,4 +1,4 @@
-# **FastAPI Application CICD with Chatgpt API and Cocktail API**
+# **FastAPI App CICD with Github Action**
 
 This repository contains a FastAPI application that integrates the Chatgpt API and Cocktail API. It also includes GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD) using pytest for testing.
 
