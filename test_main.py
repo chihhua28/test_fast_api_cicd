@@ -14,8 +14,8 @@ def test_enter_your_question():
     # Check if the response status code is 200
     assert response.status_code == 200
 
-    # message = response.json()["message"]
-    # assert len(message) < 40
+    message = response.json()["message"]
+    assert len(message) < 40
 
 def test_get_cocktail_by_name():
 
@@ -27,7 +27,7 @@ def test_get_cocktail_by_name():
     assert response.status_code == 200
 
     # Check if the response contains the expected keys
-    expected_keys = ["strDrink", "strInstructions"]
+    expected_keys = ["Drink", "Instructions"]
 
     for item in data:
         assert all(key in item for key in expected_keys), f"Response does not contain the expected keys for cocktail: {item['strDrink']}"
