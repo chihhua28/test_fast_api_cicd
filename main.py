@@ -34,8 +34,8 @@ def get_cocktail_by_name(cocktail_name: str):
     cocktails_data = []
     for drink in data['drinks']:    
         cocktail_info = {
-            'strDrink': drink['strDrink'],
-            'strInstructions': drink['strInstructions']
+            'Drink': drink['strDrink'],
+            'Instructions': drink['strInstructions']
         }
         cocktails_data.append(cocktail_info)
 
@@ -46,15 +46,3 @@ def get_cocktail_by_name(cocktail_name: str):
         cocktails_json = json.load(json_file)
 
     return(cocktails_json)
-
-
-
-
-
-
-
-
-
-
-
- 
